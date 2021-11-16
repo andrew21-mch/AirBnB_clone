@@ -1,2 +1,7 @@
 # AirBnB_clone
-Clone of AirBnB
+
+This repository holds the a console for an AirBnb clone site.
+It is a back door for the administrator to manage the data and
+every thing else in it. Using this console a Database (either a file
+database or a sql database) could be manipulated. The console
+has been built with python and the cmd libraries.
