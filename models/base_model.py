@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """
-A base model class for all the
-classes to be created in the airbnb module. This class
-will define all the basic things (attributes and functions)
-that will be used through out the project by other class
-as well
+    A base model class for all the
+    classes to be created in the airbnb module. This class
+    will define all the basic things (attributes and functions)
+    that will be used through out the project by other class
+    as well
 """
 import uuid
 from datetime import datetime
@@ -54,9 +54,9 @@ class BaseModel:
 
     def to_dict(self):
         def to_dict(self):
-        """
-            return the dictionary representation of the object to_dict
-        """
+            """
+                return the dictionary representation of the object to_dict
+            """
 
         obj_repr = {}
         for key, value in self.__dict__.items():
