@@ -129,14 +129,17 @@ TestBaseModel class:
 
 ## Examples of use
 ```
-userAirBnB_clone$./console.py
+──(andy㉿work-spaces)-[~/alx/AirBnB_clone]
+└─$ python3 console.py                                                      1 ⨯
 (hbnb) help
 
 Documented commands (type help <topic>):
 ========================================
-EOF  all  create  destroy  help  quit  show  update
+EOF  create  help  quit
 
-(hbnb) all MyModel
+(hbnb)
+
+all MyModel
 ** class doesn't exist **
 
 To be continued
