@@ -28,14 +28,16 @@ div.amenities{
   height: 100%;
 	width: 25%;
 	display: inline-block;
-  border-right: 1px solid #dddddd;
 
+}
+.locations{
+  border-right: 1px solid #dddddd;
 }
 
 h3{
-  font-weight: 600px;
+  font-weight: 600;
   font-size:14px;
 }
 h4{
-  font-weight: 400px;
+  font-weight: 400;
 }
