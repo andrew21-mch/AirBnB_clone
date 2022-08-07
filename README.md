@@ -46,13 +46,6 @@ List of commands this console current supports:
 * `def save(self)` - serializes __objects to the JSON file (path: __file_path)
 * `def to_dict(self)` - returns a dictionary containing all keys/values of the instance
 
-Classes inherited from Base Model:
-* [amenity.py](/models/amenity.py)
-* [city.py](/models/city.py)
-* [place.py](/models/place.py)
-* [review.py](/models/review.py)
-* [state.py](/models/state.py)
-* [user.py](/models/user.py)
 
 #### `/models/engine` directory contains File Storage class that handles JASON serialization and deserialization :
 [file_storage.py](/models/engine/file_storage.py) - serializes instances to a JSON file & deserializes back to instances
@@ -129,33 +122,28 @@ TestBaseModel class:
 
 ## Examples of use
 ```
-──(andy㉿work-spaces)-[~/alx/AirBnB_clone]
-└─$ python3 console.py                                                      1 ⨯
-(hbnb) help
+    (base) ┌──(andy㉿andys-workspace)-[~/dev/alx/AirBnB_clone]
+    └─$ ./console.py                                                                                                                 1 ⚙
+    (hbnb) help
 
-Documented commands (type help <topic>):
-========================================
-EOF  create  help  quit
+    Documented commands (type help <topic>):
+    ========================================
+    EOF  all  create  help  quit  show  update
 
-(hbnb)
+    (hbnb) 
 
-all MyModel
-** class doesn't exist **
+    Documented commands (type help <topic>):
+    ========================================
+    EOF  all  create  help  quit  show  update
 
-To be continued
+    (hbnb) help create
+
+            Creates an instance from the valid model argument
+            
+    (hbnb) help show
+
+            Show instance of model with specified id
 ```
-<!--(hbnb) create BaseModel
-7da56403-cc45-4f1c-ad32-bfafeb2bb050
-(hbnb) all BaseModel
-[[BaseModel] (7da56403-cc45-4f1c-ad32-bfafeb2bb050) {'updated_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772167), 'id': '7da56403-cc45-4f1c-ad32-bfafeb2bb050', 'created_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772123)}]
-(hbnb) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
-[BaseModel] (7da56403-cc45-4f1c-ad32-bfafeb2bb050) {'updated_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772167), 'id': '7da56403-cc45-4f1c-ad32-bfafeb2bb050', 'created_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772123)}
-(hbnb) destroy BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
-(hbnb) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
-** no instance found **
-`***To be generated***`
-(hbnb) quit -->
-
 
 ## Bugs
 No known bugs at this time.
