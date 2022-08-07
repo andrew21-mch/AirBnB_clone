@@ -55,14 +55,14 @@ class FileStorage:
 
         # because save() overwrites __dict__ as to_dict(), \
         # reconvert the datetime str to obj and \
-        # remove __class__
+        # remove __class__ and __name__ from dict
         for k, v in FileStorage.__objects.items():
-            for ck, cv in v.__dict__.items():
-                if ck in ('created_at', 'updated_at'):
-                    v.__dict__[ck] = datetime.strptime(cv, DATE_FORMAT)
-            # v.__dict__.__delitem__('__class__') use del or pop instead
-            v.__dict__.pop('__class__')
-
+            if type(v.updated_at) is str:
+                v.updated_at = datetime.strptime(v.updated_at, DATE_FORMAT)
+            FileStorage.__objects[k].__dict__.pop('__class__')
+            FileStorage.__objects[k].__dict__.pop('__name__')
+            # return obj id
+        return FileStorage.__objects[k].id
     def reload(self):
         """
         deserializes the json file to __objs
