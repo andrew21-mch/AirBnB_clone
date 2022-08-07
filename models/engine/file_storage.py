@@ -11,7 +11,6 @@ import json
 from datetime import datetime
 from models.base_model import BaseModel
 
-DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%f"
 MODELS = [BaseModel]
 
 
@@ -22,13 +21,6 @@ class FileStorage:
 
     __file_path: str = 'file.json'
     __objects: dict = {}
-
-    # def __init__(self):
-    #     """
-    #     constructor
-    #     """
-    #     # super().__init__()
-    #     pass
 
     def all(self):
         """
@@ -53,16 +45,13 @@ class FileStorage:
             json.dump({k: v.to_dict() for k, v in
                        FileStorage.__objects.items()}, json_file, indent=4)
 
-        # because save() overwrites __dict__ as to_dict(), \
-        # reconvert the datetime str to obj and \
-        # remove __class__ and __name__ from dict
+        # remove __class__
         for k, v in FileStorage.__objects.items():
-            if type(v.updated_at) is str:
-                v.updated_at = datetime.strptime(v.updated_at, DATE_FORMAT)
-            FileStorage.__objects[k].__dict__.pop('__class__')
-            FileStorage.__objects[k].__dict__.pop('__name__')
-            # return obj id
-        return FileStorage.__objects[k].id
+            for ck, cv in v.__dict__.items():
+                if ck in ('created_at', 'updated_at'):
+                    v.__dict__[ck] = datetime.strptime(cv, "%Y-%m-%dT%H:%M:%S.%f")
+            v.__dict__.pop('__class__')
+
     def reload(self):
         """
         deserializes the json file to __objs
@@ -123,29 +112,10 @@ class FileStorage:
         """
          delete instance
         """
-        # all_objs = self.all()
-        # model_class = None
-        # instance = None
-        # key_to_pop = None  # popping during loop changes size
-        # for header, obj in all_objs.items():
-        #     model_name, obj_id = header.split(".")
-        #     if model_name == model:
-        #         # print('Model found')
-        #         model_class = model_name
-        #         if obj_id == inst_id:
-        #             # print('Instance found')
-        #             # instance = obj
-        #             # instance = all_objs.pop(header)
-        #             key_to_pop = header
-        #
-        #         else:
-        #             # print('Instance not found')
-        #             continue
-        #     else:
-        #         # print('Model not found')
-        #         continue
-        # if key_to_pop:
-        #     instance = all_objs.pop(key_to_pop)
-        # return model_class, instance
+        model_class, instance = self.find(model, inst_id, True)
+        if instance:
+            print('Instance deleted')
+        else:
+            print('Instance not found')
 
         return self.find(model, inst_id, True)
