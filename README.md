@@ -13,8 +13,6 @@ The console is the first segment of the AirBnB project at Holberton School that 
 * [Installation](#installation)
 * [File Descriptions](#file-descriptions)
 * [Usage](#usage)
-* [Examples of use](#examples-of-use)
-* [Bugs](#bugs)
 * [Authors](#authors)
 * [License](#license)
 
@@ -38,3 +36,14 @@ List of commands this console current supports:
 * `show` - Prints the string representation of an instance based on the class name and id.
 * `all` - Prints all string representation of all instances based or not on the class name.
 * `update` - Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file).
+
+
+## Authors
+Nfon Andrew Tatah - [Github](https://github.com/andrew21-mch) / [Twitter](https://twitter.com/nfonandrew73)  / [Gmail](https://mail.google.com/mail/u/?authuser=nfonandrew73@gmail.com)
+
+--
+)  
+
+
+## License
+Public Domain. No copy write protection.
