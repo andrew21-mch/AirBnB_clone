@@ -62,5 +62,12 @@
         "first_name": "",
         "last_name": "",
         "__class__": "User"
+    },
+    "State.50ca4f27-c107-42e4-ace5-455aafe2457c": {
+        "id": "50ca4f27-c107-42e4-ace5-455aafe2457c",
+        "created_at": "2022-08-07T16:38:08.132879",
+        "updated_at": "2022-08-07T16:38:08.132956",
+        "name": "",
+        "__class__": "State"
     }
 }

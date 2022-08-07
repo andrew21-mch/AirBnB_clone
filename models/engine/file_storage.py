@@ -9,9 +9,14 @@ File storage engine
 
 import json
 from datetime import datetime
+from tkinter import Place
+from models.state import State
 from models.base_model import BaseModel
+from models.city import City
+from models.review import Review
+from models.user import User
 
-MODELS = [BaseModel]
+MODELS = [BaseModel, User, State, City, Place, Review]
 
 
 class FileStorage:
