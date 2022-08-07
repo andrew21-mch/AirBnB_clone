@@ -1,13 +1,8 @@
 #!/usr/bin/python3
 
 """
-State model
+City model
 """
-
-# class user that inherits from BaseModel
-from models.base_model import BaseModel
-
-
 class City:
     """
     City class
