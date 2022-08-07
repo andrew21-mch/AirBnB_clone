@@ -1,0 +1,35 @@
+{
+    "BaseModel.1a2014a6-a762-4aef-89c7-0e16612ff544": {
+        "id": "1a2014a6-a762-4aef-89c7-0e16612ff544",
+        "created_at": "2022-08-05T11:22:49.102287",
+        "updated_at": "2022-08-05T11:22:49.102340",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.87d9eb00-07c9-4cfa-a4fe-2498bd4214d0": {
+        "id": "87d9eb00-07c9-4cfa-a4fe-2498bd4214d0",
+        "created_at": "2022-08-05T12:17:21.852437",
+        "updated_at": "2022-08-05T12:17:21.852487",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.43986d86-66fb-4b12-8042-7ed36de1e3c2": {
+        "id": "43986d86-66fb-4b12-8042-7ed36de1e3c2",
+        "created_at": "2022-08-05T12:32:42.772553",
+        "updated_at": "2022-08-05T12:32:42.772596",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.ce3812f0-5a61-4a4a-93cf-5982faa40b03": {
+        "id": "ce3812f0-5a61-4a4a-93cf-5982faa40b03",
+        "created_at": "2022-08-06T08:55:23.975206",
+        "updated_at": "2022-08-06T09:24:27.502781",
+        "author": "Manuel",
+        "author_age": 20,
+        "author_bl": 22.2,
+        "__class__": "BaseModel"
+    },
+    "BaseModel.201105c2-50ef-481a-bd11-6d8ae420f2d8": {
+        "id": "201105c2-50ef-481a-bd11-6d8ae420f2d8",
+        "created_at": "2022-08-06T09:46:53.470679",
+        "updated_at": "2022-08-06T09:46:53.470720",
+        "__class__": "BaseModel"
+    }
+}
