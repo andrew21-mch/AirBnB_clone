@@ -12,8 +12,9 @@ import re
 
 import models
 from models.base_model import BaseModel
+from models.user import User
 
-MODELS = [BaseModel]
+MODELS = [BaseModel, User]
 
 
 class HBNBCommand(cmd.Cmd):
@@ -41,7 +42,7 @@ class HBNBCommand(cmd.Cmd):
         """
         return True
 
-    def do_EOF(self, line):
+    def EOF(self, line):
         """
         quit console on EOF
         """
@@ -129,7 +130,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             print('** ** Accepted values are 1, 2 and 4 **')
 
-    def do_create(self, line):
+    def create(self, line):
         """
         Creates an instance from the valid model argument
         """
@@ -140,7 +141,7 @@ class HBNBCommand(cmd.Cmd):
             models.storage.new(obj)
             obj.save()
 
-    def do_show(self, line: str):
+    def show(self, line: str):
         """
         Show instance of model with specified id
         """
@@ -156,7 +157,7 @@ class HBNBCommand(cmd.Cmd):
     #     # if instance:
     #     #     print(f"** {instance.id} destroyed **")
 
-    def do_all(self, line):
+    def all(self, line):
         """
         Prints all string representation of all instances
         based or not on the class name
@@ -177,7 +178,7 @@ class HBNBCommand(cmd.Cmd):
         if array:
             print(array)
 
-    def do_update(self, line):
+    def update(self, line):
         """
          Updates an instance based on the class name and id
          by adding or updating attribute
