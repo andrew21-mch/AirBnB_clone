@@ -139,7 +139,6 @@ class HBNBCommand(cmd.Cmd):
             obj = model_class()
             models.storage.new(obj)
             obj.save()
-            print(obj.id)
 
     def do_show(self, line: str):
         """
