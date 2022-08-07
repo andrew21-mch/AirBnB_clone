@@ -4,13 +4,10 @@
 console
 """
 
-# pylint:disable=broad-except, unused-argument, invalid-name
 
 
 import cmd
-import re
 
-import models
 from models.base_model import BaseModel
 
 MODELS = [BaseModel]
@@ -37,13 +34,13 @@ class HBNBCommand(cmd.Cmd):
 
     def do_quit(self, line):
         """
-        quit console
+        Quit command to exit the program 
         """
         return True
 
     def do_EOF(self, line):
         """
-        quit console on EOF
+        EOF command to exit the program
         """
         return True
 
