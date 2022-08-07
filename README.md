@@ -40,9 +40,7 @@ List of commands this console current supports:
 
 ## Authors
 Nfon Andrew Tatah - [Github](https://github.com/andrew21-mch) / [Twitter](https://twitter.com/nfonandrew73)  / [Gmail](https://mail.google.com/mail/u/?authuser=nfonandrew73@gmail.com)
-
---
-)  
+ 
 
 
 ## License
