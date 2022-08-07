@@ -23,16 +23,6 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = '(hbnb) '
 
-    ERROR_MSGS = {
-        "no_class": "** class name missing **",
-        "invalid_class": "** class doesn't exist **",
-        "no_id": "** instance id missing **",
-        "invalid_id": "** no instance found **",
-        "too_many": "** too many arguments **",
-        "no_attrib": "** attribute name missing **",
-        "no_value": "** value missing **"
-    }
-
     def str_to_class(self, model: str):
         """
         :return: class obj from str
